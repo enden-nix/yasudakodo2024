@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+		<link rel="stylesheet" href="./css/nagata.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<script src="./jquery-3.6.0.min.js"></script>
+		<script src="./jquery-ui.js"></script>
+		<script src="./nagata.js"></script>
+</head>
+<body>
+<title>永田町バトル2000</title>
+<header>永田町バトル2000</header>
+<div align="center">
+<table class="main_table">
+	<tr>
+		<td rowspan="4" class="face_cell"><img src="./images/mori.jpg" class="face_img" id="shu_img"></td>
+		<td><span id="shuryu">主流派</span></td>
+		<td><button class="mybtn" id="ButtonTel" onclick="action('電話攻撃');">電話攻撃</button></td>
+		<td><button class="mybtn" id="ButtonMitsu" onclick="action('密談');">密談</button></td>
+	</tr>
+	<tr>
+		<td><button class="mybtn" id="ButtonDoukatsu" onclick="action('恫喝');">恫喝</button></td>
+		<td><button class="mybtn" id="ButtonKouenkai" onclick="action('後援会攻撃');">後援会攻撃</button></td>
+		<td><button class="mybtn" id="ButtonGenkin" onclick="action('現金');">現金</button></td>
+	</tr>
+	<tr>
+		<td><button class="mybtn" id="ButtonMassCom" onclick="action('マスコミ出演');">マスコミ</button></td>
+		<td><button class="mybtn" id="ButtonJomei" onclick="action('除名勧告');">除名勧告</button></td>
+		<td><button class="mybtn" id="ButtonPost" onclick="action('ポスト確約');">ポスト確約</button></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+		<span id="shiji">内閣支持率 15%</span>
+		<div><div id="shijiritsu_front"></div><div id="shijiritsu_back"></div></div><br>
+	</td>
+	</tr>
+</table>
+<table class="main_table">
+	<tr>
+		<td>
+			<div class="balloon" id="message"><span id="div_message"></span></div><br>
+		</td>
+	</tr>
+</table>
+<table class="main_table">
+	<tr>
+		<td>
+			<div>衆議院本会議まで</div>
+			<div id="nokori">残り 4時間00分</div>
+			<div class="bonds" id="bonds_percent">結束 100%</div>
+			<div><div id="progressbar_front"></div><div id="progressbar_back"></div></div><br>
+			<div id="hanshuryu"><br>反主流派</div>
+		</td>
+		<td align="right" rowspan="4" class="face_cell"><img src="./images/kato.jpg" class="face_img" id="han_img"></td>
+	</tr>
+</table>
+</div>
+</div>
+<div id="dialog" title="不信任案 投票結果" style="display:none; width:80%;">
+	<span id="dialog_result"></span>
+</div>
+</body>
+</html>

@@ -1,0 +1,393 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 679px) { /* 画面が小さい */
+	body{
+		min-width: 360px;
+		margin: 0;
+		padding: 0;
+	}
+	header {
+		font-size: medium;
+	}
+	.mybtn {
+		width:100%;
+		font-size: smaller;
+	}
+	.main_table {
+		width: 100%;
+		max-width: 480px;
+		margin: 0;
+		padding: 0;
+	}
+/*	td.face_cell 
+	{
+		//width:160px;
+		//padding:12px;
+	}*/
+	.mybtn.disabled {
+		width:100%;
+		font-size: smaller;
+	}
+	#shuryu {
+		font-size:larger;
+		font-weight: bold;
+	}
+	#nokori {
+		font-size:larger;
+		font-weight: bold;
+	}
+	#hanshuryu {
+		font-size:larger;
+		font-weight: bold;
+	}
+	.balloon
+	{
+		font-size:large;
+	}
+	.balloon_up
+	{
+		font-size:large;
+	}
+	.balloon_down
+	{
+		font-size:large;
+	}
+	#message
+	{
+		height: 100px;		
+	}
+	#shiji {
+		color:black;
+		font-size:larger;
+	}
+	.bonds
+	{
+		font-size:larger;
+	}
+	.face_img
+	{
+		max-width: 100px;
+	}
+	#shijiritsu_back {
+		width: 250px;
+	}
+	#progressbar_back {
+		width: 250px;
+	}
+}
+
+@media screen and (min-width: 680px) { /* 画面が大きい */
+	header {
+		font-size: xx-large;
+	}
+	.mybtn {
+		width:130px;
+		font-size: large;
+	}
+	.main_table {
+		width: 640px;
+	}
+	td.face_cell 
+	{
+		width:160px;
+		padding:12px;
+	}
+	.mybtn.disabled {
+		width:130px;
+		font-size: large;
+	}
+	#shuryu {
+		font-size:xx-large;
+	}
+	#nokori {
+		font-size:xx-large;
+	}
+	#hanshuryu {
+		font-size:xx-large;
+	}
+	.balloon
+	{
+		font-size:x-large;
+	}
+	.balloon_up
+	{
+		font-size:x-large;
+	}
+	.balloon_down
+	{
+		font-size:x-large;
+	}
+	#message
+	{
+		height: 150px;
+	}
+	#shiji {
+		font-size:xx-large;
+	}
+	.bonds
+	{
+		font-size:xx-large;
+	}
+	#shijiritsu_back {
+		width: 320px;
+	}
+	#progressbar_back {
+		width: 320px;
+	}
+}
+
+.main_table {
+	background-color: #f0f0f0;
+}
+
+header {
+	background-color:plum;
+    vertical-align: middle;
+	font-size: xx-large;
+}
+
+.mybtn {
+	box-shadow: 3px;
+	border-left: solid 2px whitesmoke;
+	border-top: solid 2px whitesmoke;
+	border-right: solid 2px gray;
+	border-bottom: solid 2px gray;
+	background-color: lightgray;
+	border-radius: 4px;
+	color: black;
+	cursor: pointer;
+	padding-top:5px;
+	padding-bottom: 5px;
+}
+.mybtn:hover {
+	background-color: aliceblue;
+ }
+
+.mybtn:active {
+	border-left: solid 2px gray;
+	border-top: solid 2px gray;
+	border-right: solid 2px whitesmoke;
+	border-bottom: solid 2px whitesmoke;
+	transform: translateY(5 px);
+}
+
+.mybtn.disabled {
+	box-shadow: 3px;
+	border-left: solid 2px whitesmoke;
+	border-top: solid 2px whitesmoke;
+	border-right: solid 2px gray;
+	border-bottom: solid 2px gray;
+	background-color: lightgray;
+	border-radius: 4px;
+	color: darkgray;
+	cursor: pointer;
+	padding-top:5px;
+	padding-bottom: 5px;
+	pointer-events: none;
+}
+
+#shuryu {
+	color:red;
+	font-style:oblique 10deg;
+}
+#nokori {
+	color:black;
+	text-align: center;
+}
+#hanshuryu {
+	color:blue;
+	font-style:oblique 10deg;
+	text-align: right;
+}
+#shiji {
+	color:black;
+}
+
+.balloon {
+	position: relative;
+/*	display: inline-block;*/
+	margin: 1.5em 0;
+	padding: 7px 10px;
+	min-width: 120px;
+	max-width: 100%;
+	color: #000;
+	background: #ccffcc;
+	border: solid 1px #555;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+.balloon_up {
+	position: relative;
+/*	display: inline-block;*/
+	margin: 1.5em 0;
+	padding: 7px 10px;
+	min-width: 120px;
+	max-width: 100%;
+	color: red;
+	background: #ffcccc;
+	border: solid 1px #555;
+	box-sizing: border-box;
+	border-radius: 10px;
+  }
+
+ .balloon_up::before{
+	content: "";
+	position: absolute;
+	top: -36px;
+	left: 16%;
+	margin-left: -15px;
+	border: 12px solid transparent;
+	border-bottom: 24px solid #ffcccc;
+	z-index: 2;
+}
+
+.balloon_up::after{
+	content: "";
+	position: absolute;
+	top: -40px;
+	left: 16%;
+	margin-left: -17px;
+	border: 14px solid transparent;
+	border-bottom: 26px solid #555;
+	z-index: 1;
+}
+  
+.balloon_down {
+	position: relative;
+/*	display: inline-block;*/
+	margin: 1.5em 0;
+	padding: 7px 10px;
+	min-width: 120px;
+	max-width: 100%;
+	color: blue;
+	background: #ccccff;
+	border: solid 1px #555;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+
+.balloon_down::before{
+	content: "";
+	position: absolute;
+	bottom: -36px;
+	right: 16%;
+	margin-right: -15px;
+	border: 12px solid transparent;
+	border-top: 24px solid #ccccff;
+	z-index: 2;
+}
+.balloon_down::after{
+	content: "";
+	position: absolute;
+	bottom: -40px;
+	right: 16%;
+	margin-right: -17px;
+	border: 14px solid transparent;
+	border-top: 26px solid #000;
+	z-index: 1;
+  }
+
+.balloon2 p {
+	margin: 0;
+	padding: 0;
+}
+
+#shijiritsu_front {
+	position: absolute;
+	z-index: 2;
+	width: 0px;
+	height: 20px;
+	border-radius: 6px;
+	background-color: pink	;
+	display:inline-block;
+}
+
+#shijiritsu_back {
+	position: absolute;
+	z-index: 1;
+	height: 20px;
+	border-radius: 6px;
+	background-color: darkred;
+	display:inline-block;
+}
+
+#progressbar_front {
+	position: absolute;
+	z-index: 2;
+	width: 0px;
+	height: 20px;
+	border-radius: 6px;
+	background-color: aqua;
+	display:inline-block;
+}
+
+#progressbar_back {
+	position: absolute;
+	z-index: 1;
+	height: 20px;
+	border-radius: 6px;
+	background-color: darkblue;
+	display:inline-block;
+}
+
+.face_img
+{
+	width: 100%;
+}
+
+#titles{
+    position: absolute;
+    width: 18em;
+    height: 50em;
+    bottom: 0;
+    left: 50%;
+    margin-left: -9em;
+    font-size: 350%;
+    font-weight: bold;
+    text-align: justify;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(25deg);
+}
+#titles:after{
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60%;
+    background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+#titlecontent{
+    position: absolute;
+    top: 100%;
+    animation: scroll 100s linear 4s infinite;
+}
+@keyframes scroll {
+    0% { top: 100%; }
+    100% { top: -170%; }
+}
+
+body::after {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color:#fff;  /* 背景カラー */
+	z-index: 9999;  /* 一番手前に */
+	pointer-events: none;  /* 他の要素にアクセス可能にするためにポインターイベントは無効に */
+	opacity: 0;  /* 初期値 : 透過状態 */
+	-webkit-transition: opacity .8s ease;  /* アニメーション時間は 0.8秒 */
+	transition: opacity .8s ease;
+  }
+
+.description {
+	font-size: smaller;
+	background-color: black;
+	color : white;
+}
